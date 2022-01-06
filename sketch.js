@@ -105,7 +105,10 @@ function draw() {
       redCyclists();
     }
   }
-  
+    
+  mainCyclist.addAnimation("SahilRunning",mainRacerImg1);
+mainCyclist.scale=0.07;
+
    //condicionales para finalizar el juego cuando se choque contra un ciclista
    if(pinkCG.isTouching(mainCyclist)){
      gameState = END;
@@ -186,7 +189,7 @@ function redCyclists(){
 function reset(){
   gameState=PLAY;
   gameOver.visible=false;
-        mainCyclist.changeAnimation(mainRacerImg1);
+       
   
   redCG.destroyEach();
   yellowCG.destroyEach();
